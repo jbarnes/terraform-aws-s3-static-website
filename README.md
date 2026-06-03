@@ -8,7 +8,7 @@ Terraform module that provisions a CIS-compliant AWS static website stack: a pri
 
 ```hcl
 module "static_website" {
-  source = "github.com/jbarnes-au/terraform-aws-s3-static-website?ref=v0.1.0"
+  source = "github.com/jbarnes-au/terraform-aws-s3-static-website?ref=v1.0.0"
 
   bucket_name         = "my-website-bucket"
   acm_certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
