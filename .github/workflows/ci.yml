@@ -37,10 +37,14 @@ jobs:
       - name: Terraform Test
         run: terraform test
 
+      - name: Install terraform-docs
+        run: |
+          curl -sSLo terraform-docs.tar.gz https://github.com/terraform-docs/terraform-docs/releases/download/v0.24.0/terraform-docs-v0.24.0-linux-amd64.tar.gz
+          tar -xzf terraform-docs.tar.gz
+          chmod +x terraform-docs
+          sudo mv terraform-docs /usr/local/bin/
+
       - name: Check terraform-docs
-        uses: terraform-docs/gh-actions@v1
-        with:
-          working-dir: .
-          output-file: README.md
-          output-method: inject
-          fail-on-diff: true
+        run: |
+          terraform-docs .
+          git diff --exit-code README.md
