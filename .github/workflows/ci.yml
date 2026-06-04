@@ -5,6 +5,14 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  # Weekly drift check: re-resolves the Terraform CLI (~> 1.9) and the AWS
+  # provider (>= 6.0, no committed lock file) to their latest versions and runs
+  # the full job, catching breaking Terraform/provider releases. A red run
+  # emails the repo owner. Sunday 22:00 UTC = Monday 08:00 AEST. Note: GitHub
+  # auto-suspends scheduled workflows after 60 days with no repo activity.
+  schedule:
+    - cron: "0 22 * * 0"
+  workflow_dispatch:
 
 jobs:
   validate:

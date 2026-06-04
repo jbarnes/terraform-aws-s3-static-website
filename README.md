@@ -1,5 +1,9 @@
 # terraform-aws-s3-static-website
 
+[![CI (scheduled)](https://github.com/jbarnes/terraform-aws-s3-static-website/actions/workflows/ci.yml/badge.svg?event=schedule)](https://github.com/jbarnes/terraform-aws-s3-static-website/actions/workflows/ci.yml?query=event%3Aschedule)
+
+The badge above reflects the weekly scheduled CI run, which re-resolves the latest Terraform and AWS provider versions against this module to catch breaking upstream releases.
+
 Terraform module that provisions a CIS-compliant AWS static website stack: a private S3 bucket as origin, a CloudFront distribution with HTTPS enforcement and Origin Access Control (OAC), and an optional Route 53 alias record.
 
 **Out of scope:** Route 53 hosted zone and ACM certificate provisioning. These are accepted as input variables.
