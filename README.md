@@ -71,12 +71,6 @@ This module was designed and authored with the assistance of [Claude](https://ww
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.9 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.0 |
 
-## Providers
-
-| Name | Version |
-| ---- | ------- |
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 6.47.0 |
-
 ## Inputs
 
 | Name | Description | Type | Default | Required |

@@ -1,9 +1,13 @@
 formatter: markdown table
 
+# The "providers" section is intentionally omitted: terraform-docs renders the
+# *resolved* provider version there, which floats with every AWS provider
+# release (no lock file is committed). Including it would make the CI docs-diff
+# check fail on every provider release. The "requirements" section still
+# documents the meaningful version constraint (>= 6.0).
 sections:
   show:
     - requirements
-    - providers
     - inputs
     - outputs
 
