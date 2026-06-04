@@ -8,7 +8,7 @@ Terraform module that provisions a CIS-compliant AWS static website stack: a pri
 
 ```hcl
 module "static_website" {
-  source = "github.com/jbarnes-au/terraform-aws-s3-static-website?ref=v1.0.0"
+  source = "github.com/jbarnes/terraform-aws-s3-static-website?ref=v1.0.0"
 
   bucket_name         = "my-website-bucket"
   acm_certificate_arn = "arn:aws:acm:us-east-1:123456789012:certificate/aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee"
@@ -54,6 +54,10 @@ This module is compliant with the following CIS AWS Foundations Benchmark v5.0.0
 ## Tested Terraform Version
 
 Developed and tested with Terraform `1.9.x`. Minimum required version: `>= 1.9`.
+
+## Development
+
+This module was designed and authored with the assistance of [Claude](https://www.anthropic.com/claude). The interface, CIS compliance posture, and test strategy were stress-tested through an interactive design review before implementation, and the module was smoke-tested against real AWS infrastructure prior to release.
 
 <!-- BEGIN_TF_DOCS -->
 ## Requirements
